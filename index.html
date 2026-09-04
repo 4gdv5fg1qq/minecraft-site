@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/pickaxe_lvl6.png" type="image/png">
+    <title>Генератор булыжника 2</title>
+</head>
+<body>
+    <div class="">
+        <header>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#">Уровни</a></li>
+                <li><a href="#">Лидеры</a></li>
+                <li><a href="#">Войти</a></li>
+            </ul>
+        </header>
+        <!-- <div class="header">
+            <div class="title">
+                <h1>Генератор Булыжника</h1>
+                <p>Добывай булыжник киркой, как в Minecraft!</p>
+            </div>
+            <div class="counter">
+                <span class="icon"><img src="images/cobblestone.webp" alt="" class="icon_all">Добыто булыжника: &nbsp; <span id="counter">0</span></span>
+                <span class="icon"><img src="images/Pickaxe_lvl1.png" alt="" class="icon_all">Уровень кирки: &nbsp; <span id="lvl">1</span></span>
+                <span class="icon"><img src="images/grass.png" alt="" class="icon_all">Уровень мира: &nbsp; <span id="worldlvl">1</span></span>
+            </div>
+        </div> -->
+
+        <div class="counter">
+            <span class="icon"><img src="images/cobblestone.webp" alt="" class="icon_all">Добыто булыжника: &nbsp; <span id="counter">0</span></span>
+            <span class="icon"><img src="images/Pickaxe_lvl1.png" alt="" class="icon_all">Уровень кирки: &nbsp; <span id="lvl">1</span></span>
+            <span class="icon"><img src="images/grass.png" alt="" class="icon_all">Уровень мира: &nbsp; <span id="worldlvl">1</span></span>
+        </div>
+
+        <!-- Блок который добывают -->
+        <div class="container">
+            <img class="bul1" src="images/bul0.png" id="img_cob" onclick="changeImage()" data-current="0">
+        </div>
+        <!-- Кнопка открытия магазина -->
+        <div class="but_open" id="but_open">
+            <button class="open" onclick="openSell()"><img src="images/button_open.png" alt="" id="img_but"></button>
+        </div>
+        <!-- Интерфейс магазина -->
+        <div class="footer">
+            <div class="interface" id="interface">
+                <div class="slots-container">
+                    <div class="slots"><button class="buy" onclick="game.buyItem(1,/*lvl*/ 2)"><img src="images/pickaxe_lvl2.png" alt="" class="icon_buy"><br>Купить кирку <br>2 уровня
+                    </button></div>
+                    <div class="slots"><button class="buy" onclick="game.buyItem(2, 3)"><img src="images/pickaxe_lvl3.png" alt="" class="icon_buy"><br>Купить кирку <br>3 уровня
+                    </button></div>
+                    <div class="slots"><button class="buy" onclick="game.buyItem(3, 4)"><img src="images/pickaxe_lvl4.png" alt="" class="icon_buy"><br>Купить кирку <br>4 уровня
+                    </button></div>
+                    <div class="slots"><button class="buy" onclick="game.buyItem(4, 5)"><img src="images/pickaxe_lvl5.png" alt="" class="icon_buy"><br>Купить кирку <br>5 уровня
+                    </button></div>
+                    <div class="slots"><button class="buy" onclick="game.buyItem(5, 6)"><img src="images/pickaxe_lvl6.png" alt="" class="icon_buy"><br>Купить кирку <br>6 уровня
+                    </button></div>
+                    <div class="slots"><button class="buy" onclick="game.buyItem(1, 7)"><img src="images/pickaxe_lvl7.png" alt="" class="icon_buy"><br>Купить кирку <br>7 уровня
+                    </button></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- кнопка октрытия нового уровня -->
+        <div class="new-level">
+            <div style="padding-bottom: 5px;">
+                <span>Стоимость октрытия 1000 булыжника</span>
+            </div>
+            <button onclick="game.levelupgrade(10)" class="buy">Открыть новый уровень</button>
+        </div>
+    </div>
+<script src="js/script.js" defer></script>
+</body>
+</html>
